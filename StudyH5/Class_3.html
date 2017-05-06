@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖放（Drag和Drop）</title>
+		<!--<style type="text/css">
+			/*#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}*/ /*通过id来设置对应的属性*/
+		</style>-->
+		
+		<!--<script type="text/javascript">
+	    	function allowDrop(ev){
+	    		ev.preventDefault();
+	    	}drag1;
+	    	
+	    	function drag(ev){
+	    		ev.DataTransfer.setData("Text",ev.target.id);
+	    	}
+	    	
+	    	function drop(ev){
+	    		ev.preventDefault();
+	    		var data = ev.DataTransfer.getData("Text");
+	    		ev.target.appendChild(document.getElementById(data));
+	    	}
+	    </script>-->
+	    
+	    <style type="text/css">
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+
+function drag(ev)
+{
+	ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+}
+</script>
+	</head>
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2017-01-03  
+        	描述：拖放：是一种常见的特性，即抓取对象以后拖到另一位置。在H5中，拖放是标准的一部分，任何元素都能够拖放
+        -->
+        <p>拖动W3CSchool图片到矩形框中</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 400px ;height: 400px; border: 2px solid #FF7F50;padding:10px; ">	</div>
+        
+        <br>
+        <p>拖地呢下面的图片</p>
+        <img id="drag1" src="../StudyHTML/Image/head.png"  draggable="true" ondragstart="allowDrop(event)" width="200" height="200"/>
+	    
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第一课：盒子模型详解</title>
+	</head>
+	<style type="text/css">
+		.backgroundClass {
+			background-color: #0099FF;
+			/*背景是否滚动
+			 fixed：固定位置
+			 inherit:继承
+			 initial:最初的
+			 !important：不重要的
+			 local:
+			 scroll:滚动的
+			 * */
+			background-attachment: scroll;  
+			background-image: url(images/icon_success@3x.png);
+			/*背景图是否重复*/
+			background-repeat: no-repeat; 
+			background-position: center 10px;
+			width: 500px;
+			height: 300px;
+		}
+		#borderStyle {
+			border-width: 1px; /*会影响盒子大小*/
+			/*dashed：虚线   solid实线  dotted：点线*/
+			border-style: dashed;
+			border-color: red;
+		}
+		.paddingStyle {
+			padding: 10px 20px 30px 10px;
+		}
+		.marginStyle {
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+		.textStyle {
+			font-size: 18px;
+			font-family: "微软雅黑";
+			color: rgb(100,222,111);
+			line-height: 30px;
+			text-align: center;
+			text-indent: 2em;
+			font-weight: 100;
+			font-style: italic;
+			text-decoration: underline;
+			letter-spacing: 10px;
+			word-spacing: 2px;
+		}
+	</style>
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2017-03-23
+        	描述：background常见样式
+        -->
+		<div id="" class="backgroundClass">
+			dfgfhj
+		</div>
+		
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2017-03-23
+        	描述：border边框
+        	      border-width;
+        	      border-style:边框样式
+        	      border-color:边框颜色
+        	        边框样式：
+        	        solid:实线
+        	        dashed:虚线
+        	        dotted:点线(IE6不兼容)
+        	     
+        	     内边距：padding(内边距相当于给盒子加了充填厚度会影响盒子大小)
+        	     外边距：margin
+        	            1.上下外边距会叠压
+        	            2.父子级包含的时候子级的margin-top会传递给父级（safari浏览器不变  内边距替代外边距）
+        -->
+		<div id="borderStyle" class="paddingStyle" style="width: 300px; height: 200px;">
+			我是测试内边距我是测试内边距我是测试内边距我是测试内边距我是测试内边距我是测试内边距
+			<div id="" class="marginStyle" style="width: 100px; height: 100px; background-color: greenyellow;">
+				
+			</div>
+		</div>
+		
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2017-03-23
+        	描述：常见文本样式：
+        	      font-size：文字大小
+        	      font-family：字体（中文默认是宋体）
+        	      color:文字颜色
+        	      line-height：行高
+        	      text-align：文本对齐方式
+        	      text-indent:首航缩进（em缩进字符）
+        	      font-weight:文字着重
+        	      font-style:文字倾斜
+        	      text-decoration：文本修饰
+        	      letter-spacing：字母间距
+        	      word-spacing：单词间距
+       
+        -->
+        <div id="borderStyle" class="textStyle" style="margin-top: 10px;">
+        	     文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置文本设置
+        </div>
+	</body>
+</html>

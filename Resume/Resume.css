@@ -1,0 +1,75 @@
+.width {
+	width: 100%;
+}
+.headerImageDiv {
+	display: inline-block;
+	margin-top: -100px;
+	width: 140px;
+	height: 140px;
+	border-radius: 70px; 
+	background-color: white;
+	text-align: center;
+}
+.headerImage {
+	width: 130px;
+	height: 130px;
+	border-radius: 65px;
+	margin-top: 5px;
+}
+.marginLeft {
+	margin-left: 40px;
+}
+.marginRight {
+	margin-right: 40px;
+}
+.textNameColor {
+	color: gray;
+}
+.inlineBlock {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+.block {
+	display: block;
+}
+.bigSpacing {
+	margin-top: 10px;
+}
+.smallSpacing {
+	margin-top: 5px;
+}
+.contentSize {
+	font-size: 17px;
+}
+.contentColor {
+	color: #666666;
+}
+.iconSize {
+	width: 20px;
+	height: 20px;
+}
+.smallBgdColor {
+	background-color: #999999;
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.textAlign {
+	text-align: center;
+}
+font {
+	color: #333333;
+	margin-top: 5px;
+}
+li {
+	color: #333333;
+	margin-top: 5px;
+}
+h4 {
+	margin-left: 40px;
+}

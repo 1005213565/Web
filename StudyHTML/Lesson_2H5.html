@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Lesson_3H5.html"/>
+		<meta charset="UTF-8">
+		<title>链接、头部</title>
+	</head>
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2016-12-23
+        	描述：链接
+        	     超链接可以是一个字、一个词、或者一组词、也可以是一副图像，您可以点击这些内容
+        	     来跳转到新的文档或者当前文档中的某个部分
+        	     当您把鼠标指针移动到网页中的某个链接上时，箭头会变为一只小手。
+        	     在标签<a>中使用了href属性来描述链接的地址
+        	     默认情况下，链接将以以下形式出现在浏览器中：
+        	     1.一个未访问过的链接显示为蓝色字体并带有下划线
+        	     2.访问过的链接显示为紫色并带有下划线
+        	     3.点击链接，链接显示为红色并带有下划线
+        	     注意：如果为这些超链接设置了CSS样式，展示样式会根据CSS的设定而显示
+        	     
+        	     使用target属性，你可以定义被链接的文档在何处显示，_blank是打开新的窗口
+        	     _top是跳出框架
+        	     id属性可用于创建在一个HTML文档书签标记
+        	     
+        	     
+        	     基本注意事项：
+        	     请始终将正斜杠添加到子文件夹。假如这样书写链接：href="http://www.runoob.com/html"，就会向服务器
+        	     产生两次HTTP请求。这是因为服务器会添加正斜杠到这个地址，然后创建新的请求
+        -->
+        <a id="tips" href="https://www.baidu.com" target="_blank">我是百度的链接</a>
+        
+        <!--创建图片链接-->
+        <p>创建图片链接<a href = "https://www.baidu.com"><img border="1" src="Image/fly.png" width="40" height="50"></a></p>
+	    
+	    <!-- 在当前页面的指定位置-->
+	    <a href="#C1">点击我调到章节2</a>
+	    
+	    <!-- 链接到一个邮件，相当于自己给别人发送邮件（只有安装邮件客服端程序后才能工作） -->
+	    <!--mailto:发送给谁？cc=抄送给谁&bcc=密送给谁&Subject=主题&body=我是内容-->
+	    <p>这是一个邮件链接<a href="mailto:1005213565@qq.com?cc=1005213565@qq.com&bcc=1005213565@qq.com&Subject=您好%20我是主题&body=我是内容" target="_blank">给石峰发送邮件</a></p>
+	    <p>注意：单词中的空格使用%20代替</p>
+	    
+	    
+	    
+	    
+	    <!--
+        	作者：1005213565@qq.com
+        	时间：2016-12-23
+        	描述：头部
+        	    <title>元素：
+        	    	1.定义了浏览器工具栏的标题
+        	    	2.当网页添加到收藏夹的时候，显示在收藏夹中的标题
+        	    	3.显示在搜索引擎结果页面的标题
+        	    	
+        	    	<base>元素：
+        	    	1.标签描述了基本的链接地址/链接目标，该标签作为HTML 文档中所有的链接标签的默认链接
+        	    	<head>
+             <base href="http://www.runoob.com/images/" target="_blank">
+            </head>
+
+        	    	<link>元素：
+        	    	1.标签定义了文档与外部资源之间的关系
+        	    	2.标签通常用于链接到的样式表
+        	    	<head>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+            </head>
+            
+            <style>元素：
+            	1.标签定义了HTML文档的样式文件引用地址
+            	2.在<style>元素中你可以直接添加样式来渲染HTML文档
+            	<head>
+              <style type="text/css">
+              body {background-color:yellow}
+              p {color:blue}
+              </style>
+            </head>
+            
+            <meta>元素：
+            	1.标签描述了一些基本的元数据
+            	2.标签提供了元数据，元数据也不显示在页面上，但是被浏览器解析
+            	3.META元素通常用于指定网页的秒数，关键字，文件的最后修改时间，作者，和其他元数据
+            	4.元数据可以使用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键字），或者其他Web服务
+            	5.<meta>一般放置于<head>区域
+            	
+            	为搜索引擎定义关键词
+            	<meta name="keywords" content="HTML, CSS, XML, XHTML,JavaScript">
+            	为网页定义描述内容
+            	<meta name="description" content="Free Web tutorials on HTML and CSS">
+            	定义网页作者
+            	<meta name="author" content="Hege Refsnes">
+            	每30秒中刷新当前页面
+            	<meta http-equiv="refresh" content="30">
+            		
+            		
+            		
+            	<script>元素：
+            	1.标签用于加载脚本文件，如：JavaScript
+            	2.元素在以下章节会详细说明
+            	
+            	
+            	<style>元素：
+            	1.定义了HTML文档的样式文件
+        -->
+	    
+	    
+	    
+	    
+	    
+	    
+	    <h2>章节 1</h2>
+        <p>这边显示该章节的内容……</p>
+
+         <h2 id="C1">章节 2</h2>
+         <p>这边显示该章节的内容……</p>
+
+          <h2>章节 3</h2>
+          <p>这边显示该章节的内容……</p>
+
+         <h2>章节4</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 5</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 6</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 7</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 8</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 9</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 10</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 11</h2>
+         <p>这边显示该章节的内容……</p>
+
+         <h2>章节 12</h2>
+         <p>这边显示该章节的内容……</p>
+
+
+	</body>
+</html>

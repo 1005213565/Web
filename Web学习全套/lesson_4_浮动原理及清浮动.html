@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动原理及清浮动</title>
+		<style type="text/css">
+		    body {
+		    	margin: 0px;
+		    }
+			#div1 {
+				height: 100px;
+				width: 300px;
+				;
+				margin-top: 100px;
+				float: left;
+				border-top: 2px solid black;
+				border-bottom: 2px solid black;
+			}
+			
+			#div2 {
+				height: 300px;
+				width: 100px;
+				margin-left: -200px;
+				display: inline-block;
+				border-left: 2px solid black;
+				border-right: 2px solid black;
+			}
+			#div3 {
+				display: block;
+			}
+		    .div4 {
+				width: 50px;
+				background: green;
+				border: 2px solid royalblue;
+				height: 200px;
+				float: left;
+			}
+			.div5 {
+				height: 100px;
+				background: black;
+			}
+			.div6 {
+				height: 50px;
+				background: black;
+			}
+			#div_left {
+				background-color: chartreuse;
+				width: 300px;
+				height: 500px;
+				float: left;
+				margin: 0px;
+			}
+			#div_right {
+				width: 500px;
+				background-color: pink;
+				height: 500px;
+				float: right;
+				margin: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="" style="margin: 0px auto; width: 700px;background: gold;">
+			<div id="div1">
+			</div>
+			<div id="div2">
+			</div>
+		</div>
+		
+		<div id="div3" style="margin: 0px auto; width: 500px;background: gray;">
+			<div id="" class="div4">
+				<div id="" class="div5">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div6">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div5">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div6">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div5">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div6">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div5">
+
+				</div>
+			</div>
+			<div id="" class="div4">
+				<div id="" class="div6">
+
+				</div>
+			</div>
+		</div>
+		
+		<!--结构实例-->
+		<div id="" style="margin: 204px auto 0px auto; width: 800px;background: gray;border: 2px solid red;">
+			<div id="div_left">
+				
+			</div>
+			<div id="div_right">
+				<div id="" style="height: 100px; background: orange;">
+				    	
+				</div>
+				<div id="" style="height: 200px;">
+				    	<div id="" style="width: 250px;background-color: red;height: 100%; float: left;">
+				    		
+				    	</div>
+				    	<div id="" style="width: 250px;background-color: cyan;height: 100%; float: left;">
+				    		
+				    	</div>
+				</div>
+			</div>
+			<br clear="all"/>
+		</div>
+	</body>
+</html>

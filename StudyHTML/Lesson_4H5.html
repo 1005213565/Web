@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格</title>
+	</head>
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2016-12-24
+        	描述：表格：
+        	     表格由<table>标签来定义。每个表格均有若干行（由<tr>标签来定义）,每行被分割为若干
+        	     单元格(由<td>标签定义).字母td指表格数据(table data)，即数据单元格的内容。数据单元格
+        	     可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+        	     
+        	     表格表头：
+        	     表格的表头使用<th>标签进行定义。
+        	     大多数浏览器会把表头显示为粗体居中的文本
+        	     
+        	     
+        	     表格标签：
+        	     <table> 定义表格
+        	     <th>    定义表格的表头
+        	     <tr>    定义表格的行数
+        	     <td>    定义表格单元格
+        	     <caption> 定义表格的标题
+        	     <colgroup> 定义表格列的组
+        	     <col> 定义用于表格列的属性
+        	     <thead> 定义表格的页眉
+        	     <tbody> 定义表格的主体
+        	     <tfoot> 定义表格的页脚
+        
+        -->
+        <!--有边框的表格-->
+        <table border="2">
+        	<tr>
+        		<th style="background-color: green;">Header 1</th>
+        		<th>Header 2</th>
+        	</tr>
+        	<tr>
+            <td>row 1,cell 1</td>
+        	    <td>row 1,cell 2</td>
+        	</tr>
+        	<tr>
+        		<td>row 2,cell 1</td>
+        		<td>row 2,cell 2</td>
+        	</tr>
+        </table>
+        
+        <!--表格中的表头-->
+        <h4>水平标题</h4>
+        <table border="2" cellspacing="" cellpadding="">
+        	<tr>
+        		<th>Name</th>
+        		<th>Telephone</th>
+        		<th>Telephone</th>
+        	</tr>
+        	<tr>
+        		<td>ShiFeng</td>
+        		<td>183 9247 5589</td>
+        		<td>182 9201 3024</td>
+        	</tr>
+        </table>
+        
+        <!--垂直单元格，带有标题-->
+        <h4>垂直标题</h4>
+        <table border="2">
+        	<caption>我是表格的标题</caption>
+        	<tr>
+        		<th>First Name:</th>
+        		<td>ShiFeng</td>
+        	</tr>
+        	<tr>
+        		<th>Telephone:</th>
+        		<td>183 9247 5589</td>
+        	</tr>
+        	<tr>
+        		<th>Telephone:</th>
+        		<td>182 9210 3024</td>
+        	</tr>
+        </table>
+        
+       <!--单元格跨两个-->
+       <h4>单元格跨两个</h4>
+       <table border="3" cellspacing="" cellpadding="">
+       	<tr>
+       		<th>Name</th>
+            <th colspan="2">Telephone</th>
+       	</tr>
+       	<tr>
+       		<td>ZhangSan</td>
+       		<td>183 9247 5589</td>
+       		<td>182 9201 3024</td>
+       		<td>184 9345 8768</td>
+       	</tr>
+       </table>
+       
+      
+       <!--表格内的标签,本例演示如何显示在不同的元素内显示元素-->
+       <h4>表格内写表格</h4>
+       <table border="3" cellspacing="" cellpadding="">
+       	<tr>
+       		<td>
+       		<p>这是一个段落</p>
+       		<p>这是另一个段落</p>
+       	    </td>
+       	    <td>
+       	    	 这个单元格包含一个表格
+       	    	 <table border="2" cellspacing="" cellpadding="">
+       	    	 	<tr><th>A</th></tr>
+       	    	 	<tr><td>B</td></tr>
+       	    	 </table>
+       	    </td>
+       	</tr>
+       	
+       	<tr>
+       		<td>
+       			这个单元格包含一个列表
+       			<!--<ul>是表示一列带有前面着重点的   <li>是表示最前面那一点-->
+       		    <ul> 
+       		    	  <li>苹果</li>
+       		    	  <li>橘子</li>
+       		    	  <li>香蕉</li>
+       		    </ul>
+       		</td>
+       		<td>
+       			Hello
+       		</td>
+       	</tr>
+       </table>
+       
+       
+       <!--单元格边距，本例使用cell padding（单元格内的字距离边框的边距）cellspacing(cell距离四周的边距)来创建单元格内容与其边框之间的空白-->
+       <h4>单元格边距</h4>
+       <table border="1" cellspacing="5" cellpadding="30">
+       	<tr><th>有边距</th></tr>
+       	<tr><td>有距离</td></tr>
+       </table>
+	</body>
+</html>

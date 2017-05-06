@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Map和Set</title>
+	</head>
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2016-12-21
+        	描述：JS的Map就相当于OC的字典
+        -->
+        <script type="text/javascript">
+        	// 1.创建Map
+        	var m1 = new Map(); // 空Map
+        	var m2 = new Map([["Mic",89],["Bob",78],["CT",23]]); // 直接创建
+        	m1.set("VC",23);
+        	m1.set("KT",98); // 添加键值对
+        	m1.set("VC",56); // 由于一个key只能对应一个value，所以多次放如相同的key会把前面的冲掉
+        	m1.has("VC"); // 是否存在key "VC":true
+        	m1.get("VC"); // 得到value
+        	m1.delete("VC"); // 删除key
+        	m1.get("VC"); // 得到的VC是没有定义的为undefined
+        	
+        </script>
+        
+        
+        <!--
+        	作者：1005213565@qq.com
+        	时间：2016-12-21
+        	描述：Set是无序的，而且里面的内容是key是唯一的，重复的将自动被过滤
+        	     Set和Map类似，也是一组key的集合，但不储存value。由于key不能重复，所以在Set中，没有
+        	     重复的key。要创建一个Set，需要提供一个Array作为输入，或者直接创建一个空Set
+        -->
+       <script type="text/javascript">
+       	var s1 = new Set(); // 创建一个空的Set
+       	var s2 = new Set([1,2,3]); // 含1，2，3
+       	var s3 = new Set([1,2,3,3,"3"]); // 得到的是{1，2，3，“3”} 重复的被过滤了，3和"3"是不同的元素
+       	s1.add(2); // 添加元素
+       	s1.delete(2); // 删除元素
+       	
+       </script>
+	</body>
+</html>

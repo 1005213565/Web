@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>框架</title>
+	</head>
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2016-12-29
+        	描述：框架：
+        	     使用框架，你可以在同一个浏览器窗口显示不止一个页面
+        	     
+        	     Iframe语法：
+        	     <iframe src="URL"></iframe>
+        	     该URL指向不同的网页
+        	     
+        	     
+        	     Iframe-设置高度与宽度
+        	     height和width属性用来定义iframe标签的高度与宽度
+        	     属性默认以像素为单位，但是你可以指定其按比例显示（如：80%）
+        	     实例：
+        	     <iframe src="demo-iframe.html" width="200" height="200"></iframe>
+        	     
+        	     Iframe-移除边框
+        	     frameborder属性用于定义iframe表示是否显示边框。
+        	     设置属性值为“0”移除iframe的边框
+        	     
+        	     
+        	     使用iframe来显示目标连接页面
+        	     iframe可以显示一个目标链接的页面
+        	     目标链接的属性必须使用iframe的属性
+        -->
+        <h4>设置高和宽度</h4>
+        <iframe src="Lesson_7H5.html" width="200" height="200"></iframe>
+        
+        <h4>移除边框</h4>
+        <iframe src="Lesson_2H5.html" width="200" height="200" frameborder="0"></iframe>
+        
+        <h4>使用frame来显示目标链接页面</h4>
+        <iframe src="Lesson_3H5.html" width="200" height="200" name="iframe_a"></iframe>
+        <!--写了target="iframe_a"就是点击了这个切换的是本目标，否则切换整个页面-->
+        <p><a href="Lesson_2H5.html" target="iframe_a">点击显示Lesson_6H5.html</a></p>
+        <p><a href="Lesson_3H5.html" target="iframe_a">点击显示Lesson_3H5.html</a></p>
+	</body>
+</html>
