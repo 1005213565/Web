@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>滑动门</title>
+	</head>
+	<style type="text/css">
+		.left {
+			background: url(images/bg_left.png) no-repeat;
+		}
+		.right {
+			background: url(images/bg_right.png)  no-repeat right 0px;
+		}
+		.center {
+			background: url(images/bg_center.png) repeat-x blue;
+			width: 300px;
+			height: 62px;
+		}
+		
+		body,ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		li {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+		}
+		body {
+			padding: 50px;
+		}
+		
+		.nav {
+			background: black url(images/base_center.png) repeat-x;
+			float: left;
+		}
+		.navL {
+			background: url(images/base_left.png) no-repeat;
+			float: left;
+		}
+		.navR {
+			background: url(images/base_right.png) no-repeat right 0px;
+			float: left;
+			padding: 4px 4px 0px 4px;
+		}
+		.nav li {
+			float: left;
+			margin: 3px 2px 0px 2px;
+			background: url(images/bg_center.png) repeat-x;
+		}	
+		.nav a {
+			float: left;
+			background: url(images/bg_left.png) no-repeat;
+		}
+		.nav span {
+			float: left;
+			background: url(images/bg_right.png) no-repeat right 0px;
+			height: 40px;
+			
+			padding: 0px 18px;
+			line-height: 40px;
+			color: white;
+			font-size: 14px;
+		}
+		.nav li:hover,.nav .active {
+			background-image: url(images/red_center.png);
+		}
+		.nav a:hover,.nav .active a{
+			background-image: url(images/red_left.png);
+		}
+		
+		.nav a:hover span, .nav .active span {
+			background-image: url(images/red_right.png);
+		}
+			/*
+		 元素的宽度由内容撑开：
+		 1.display:inline
+		 2.display:inline-block
+		 3.float
+		 4.position:absolute
+		 5.position:fixed
+		 * */
+	</style>
+	
+	<body>
+	<div class="nav">
+		<div class="navL">
+			<div class="navR">
+				<ul>
+					<li class="active">
+						<a href="" >
+							<span id="">
+								妙味课程关于我们加入
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span id="">
+								课程
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span id="">
+								加入妙味
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span id="">
+								关于我们
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+		<!--<div  class="center">
+			<div class="left">
+				<div class="right">
+				<p style="line-height: 70px; text-align: center;">我是妙味</p>	
+				</div>
+			</div>
+		</div>-->
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>lesson_8_2表格的基本特性</title>
+		<style type="text/css">
+			/*取消默认样式*/
+			
+			th,
+			td {
+				padding: 0px;
+			}
+			
+			table {
+				border-collapse: collapse;
+				/*合并单元格*/
+			}
+			/*样式*/
+			table {
+				/*border: 1px solid black;*/
+				width: 500px;
+				height: 200px;
+			}
+			
+			td,
+			th {
+				border: 1px solid black;
+				height: 50px;
+				width: 100px;
+			}
+			/*
+			 * 注意事项：
+			 * 1.不要给table、th、td以外的表格标签加样式
+			 * 2.table的标签基本特性是是dispaly:table
+			 * 3.table的单元格默认是平分table的宽度
+			 * 4.td里面的文字默认是加粗，并且默认左右上下居中显示
+			 * 5.td里面的文字默认是上下居中，距左显示
+			 * 6.table决定了整个表格的宽度
+			 * 7.table里面的单元格宽度会被转换成百分数
+			 * 8.表格里面的每列必须有宽度，要不然单元格的宽度被内容自适应就会发生变化（如果加了宽度，高度还是会自适应的，不管是否设置了高度
+			 * 9.表格同一竖列是继承最大宽度的
+			 * 10.表格里面的同一行是继承最大高度
+			 */
+		</style>
+	</head>
+
+	<body>
+		<table border="" cellspacing="" cellpadding="">
+			<tr>
+				<th>表格标题表格标题表格标题表格标题表格标题表格标题表格标题表格标题表格标题表格标题表格标题表格标题</th>
+				<th>表格标题</th>
+				<th>表格标题</th>
+				<th>表格标题</th>
+				<th>表格标题</th>
+			</tr>
+			<tbody>
+				<tr>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+				</tr>
+				<tr>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+				</tr>
+				<tr>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+					<td>单元格</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	
+	</body>
+
+</html>

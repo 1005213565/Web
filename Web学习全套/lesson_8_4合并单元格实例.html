@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>合并单元格实例</title>
+		
+		<style type="text/css">
+			th, td{
+				padding: 0px;
+				border: 1px solid black;
+				text-align: center;
+			}
+			table {
+				border-collapse: collapse;
+				width: 700px;
+				margin: 10px auto;
+			}
+			th{
+				background: cornflowerblue;
+				height: 30px;
+			}
+			td{
+				height: 28px;
+			}
+			img {
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="">
+			<tr>
+				<th colspan="2">日期</th>
+				<th colspan="2">天气预报</th>
+				<th>气温</th>
+				<th>风向</th>
+				<th>风力</th>
+			</tr>
+			
+			<tr>
+				<td rowspan="2">星期五</td>
+				<td>白天</td>
+				<td><img width="30" src="images/icon_close@3x.png"/></td>
+				<td>晴天多云</td>
+				<td>高温 7℃</td>
+				<td>无持续风向</td>
+				<td>大风</td>
+			</tr>
+			<tr>
+				<td>夜间</td>
+				<td>月亮</td>
+				<td>晴</td>
+				<td>低温-4℃</td>
+				<td>无持续风向</td>
+				<td>小风</td>
+			</tr>
+			<tr>
+				<td rowspan="2">星期六</td>
+				<td>白天</td>
+				<td>太阳</td>
+				<td>晴</td>
+				<td>高温9℃</td>
+				<td>无持续风向</td>
+				<td>歪风</td>
+			</tr>
+			<tr>
+				<td>夜间</td>
+				<td>白云</td>
+				<td>阴</td>
+				<td>低温 -2℃</td>
+				<td>无持续风向</td>
+				<td>没风
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
