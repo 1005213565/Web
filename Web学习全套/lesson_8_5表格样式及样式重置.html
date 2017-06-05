@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>表单样式及重置</title>
+
+/*
+			 * 默认样式重置
+			 */
+			form {
+				margin: 0px;
+			}
+			input {
+				margin: 0px;
+				padding: 0px;
+			}
+			select {
+				margin: 0px;
+			}
+			textarea {
+				margin:  0px;
+				padding: 0px;
+				resize: none;
+				overflow: auto;
+				outline: none;
+			}
+	</head>
+
+	<body>
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2017-05-19
+        	描述：表单标签：form    
+        	      表单里面的输入：input
+        	      lable包起来的就是点选了汉子男女也能选
+        -->
+		<form action="http://www.baidu.com" method="get" target="_blank">
+
+			提交按钮：<input type="submit" value="提交" name="" />
+			<br /> 文本框：
+			<input type="text" name="" />
+			<br /> 密码框：
+			<input type="password" name="" />
+			<br /> 性别：
+			<!--<label>
+				<input type="radio" name="gender"/>女
+			</label>
+			<label>
+				<input type="radio" name="gender"/>男
+			</label>-->
+
+			<!--由于兼容的问题，可能上面的方法没用，所以要用下面的方法-->
+
+			<input type="radio" name="gender" id="a" />
+			<label for="a">男</label><!--指的是这个lable与谁进行关联-->
+			<input type="radio" name="gender" id="b" />
+			<label for="b">女</label>
+			<br />
+
+            复选框：
+            <input type="checkbox" name="" disabled=""/>宅 <!--disabled禁用，不能点选-->
+            <input type="checkbox" name="" />腐
+            <input type="checkbox" name="" />逛街
+            <input type="checkbox" name="" checked=""/>健身 <!--checked默认选中-->
+            
+            <br />
+            上传：<input type="file" />
+            <br />
+            
+            图片：<input type="image" />
+            隐藏：<input type="hidden" value="我是隐藏"/>
+            按钮：<input type="button" value="我是按钮"/>
+            重置：<input type="reset"  value="重置"/>
+		</form>
+
+	</body>
+
+</html>
