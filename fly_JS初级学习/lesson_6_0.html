@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无标题</title>
+		 <style type="text/css">
+	    	    #div1 {
+	    	    	width: 100px;
+	    	    	height: 120px;
+	    	    	background: red;
+	    	    }
+	    </style>
+		<!--导入JS，通过路径-->
+		<script src="js/shiFeng1.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">
+	    	$(function() { // 调用了上面导入JS里面的方法
+	    		
+	    		// 以下两种方法该的都是标签内部的style
+	    		$('div1').style.width = '200px';
+	    		$('div1').style.cssText = 'width:300px';
+	    		
+	    		$('btn1').onclick = function () {
+                
+                alert(getStyle($('div1'),'height'));
+	    		}
+	    	});
+	    	
+	    	/*
+	    	 定时器：时间概念
+	    	   var timer = setInterval(函数，毫秒); 设置定时器 ,重复执行
+	    	   clearInterval(timer) 停止定时器
+	    	   setTimeout(函数，毫秒); 执行一次
+	    	   clearTimeout(); 停止定时器
+	    	 * */
+	    	var i = 0;
+	    	var timer = null;
+	    	function fn1() {
+	    		document.title = i;
+	    		i++;
+	    		if (i === 10) {
+	    			clearInterval(timer); 
+	    		}
+	    	}
+	    timer =	setInterval(fn1,1000);
+	    	
+	    </script>
+	</head>
+	<body>
+		
+		<input id="btn1" type="button" value="按钮" />
+		<div id="div1"></div>
+	</body>
+</html>
