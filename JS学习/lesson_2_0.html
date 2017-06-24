@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性操作</title>
+		
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload = function () {
+				var oAttr = document.getElementById("attr");
+				var oVal = document.getElementById('val');
+				var oBtn = document.getElementById('text1');
+				var oDiv1 = document.getElementById('div1');
+				
+				oBtn.onclick = function () {
+					
+					oDiv1.style[oAttr.value] = oVal.value;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		请输入属性的名称：<input type="text" id="attr"/> <br />
+		请输入属性的值：<input type="text" id="val"/>
+		<input id="text1" type="button" value="确定"/>
+		
+		<div id="div1"></div>
+	</body>
+</html>

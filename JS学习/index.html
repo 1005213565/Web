@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+		window.onload = function ()  // 匿名函数
+		{
+			document.getElementById("link").onmouseover = show;
+
+			function show() {
+				document.getElementById("ul1").style.display = "block";
+			}
+
+			document.getElementById("link").onmouseout = hidden;
+
+			function hidden() {
+				document.getElementById("ul1").style.display = "none";
+			}
+			
+			var comment = document.getElementById("comments");
+			comment.onclick = function () {
+				alert(comment.innerHTML);
+			}
+		}
+			
+
+			/*
+			 * JS中如何获取元素
+			 * 1.通过ID名称:
+			 *   document.getElementById('link');
+			 * 
+			 * 事件：鼠标事件、键盘事件、系统事件、表单事件、自定义事件。。。
+			 * 鼠标事件：onclick
+			 *          onmouseover
+			 *          onmouseout
+			 *          onmousemove
+			 *          onmouseup
+			 * 
+			 * onload:加载完后执行
+			 * window.onload = 事件
+			 * img.onload = 事件
+			 * 
+			 * 如何添加事件：
+			 *     元素.onmouseover
+			 * 
+			 * 函数：可以理解为命令，做一些事
+			 *      function 名字() { 
+			 * 	       ......
+			 *      }
+			 *      1.直接调用：abc();
+			 *      2.事件调用：元素.事件 = 函数名.oDic.onclick = abc;
+			 * 
+			 * 测试：alert(); // 带了一个确定按钮的警告框
+			 *   
+			 * 
+			 * 变量：
+			 * var li = document.getElementById('list');
+			 */
+		</script>
+		<style>
+			ul ul {
+				padding: 0px;
+				margin: 0px;
+				width: 140px;
+				border: 1px solid #333333;
+				position: absolute;
+				/* 子级是一个绝对定位 */
+				top: 30px;
+				/*相对于父级的位置*/
+				left: -1px;
+				background: greenyellow;
+				display: none;
+			}
+			
+			.list {
+				list-style: none;
+				width: 80px;
+				height: 30px;
+				border: 1px solid #333333;
+				position: relative;
+				/*父级是一个相对定位*/
+			}
+			
+			.list a {
+				display: block;
+				line-height: 30px;
+				text-align: center;
+				text-decoration: none;
+				color: red;
+				background: cyan;
+			}
+			
+			ul ul li {
+				text-align: center;
+				line-height: 30px;
+			}
+			
+			li {
+				list-style: none;
+			}
+		</style>
+
+		<!--
+        	作者：1005213565@qq.com
+        	时间：2017-06-01
+        	描述：希望把某个元素移除你的视线：
+        	     1.display:none;  显示为无
+        	     2.visibility:hidden;  隐藏
+        	     3.width / height 改变宽高
+        	     4.透明度
+        	     5.left / top
+        	     6.拿一个白的div盖住
+        -->
+	</head>
+
+	<body>
+
+		<ul>
+			<li class="list">
+				<div id="link">
+					<a href="#">微博</a>
+					<ul id="ul1">
+						<li>私信</li>
+						<li id="comments">评论</li>
+						<li>@我</li>
+					</ul>
+				</div>
+
+			</li>
+		</ul>
+
+		
+	</body>
+
+</html>

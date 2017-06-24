@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图制作</title>
+	</head>
+	<style type="text/css">
+		.warp {
+			width: 200px;
+			height: 150px;
+			background-color: cyan;
+			margin: 0px auto;
+			overflow: hidden;
+			
+		}
+		body {
+			margin: 0px;
+		}
+		li {
+			width: 200px;
+			height: 150px;
+			background-color: red;
+			float: left;
+		}
+		ul {
+			padding: 0px;
+			margin: 0px;
+			list-style: none;
+			width: 400px;
+			
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function () {
+			var ali = document.getElementsByTagName('li');
+			var oul = document.getElementsByTagName('ul')[0];
+			var imgs = ['img/wheel_icon0.png','img/wheel_icon1.png','img/wheel_icon2.png','img/wheel_icon3.png','img/wheel_icon4.png'];
+			// 获取li的宽度
+			var liWidth = getComputedStyle(ali[0]).width;
+			var tempImgs = [imgs[0],imgs[1]];
+			
+			function setBgUrl() {
+				for (var i = 0;i < ali.length; i++) {
+				  ali[i].style.background = 'url('+tempImgs[i]+')';
+			    }
+			}
+			setBgUrl();
+			
+			var speed = -5;
+			var k = 1;
+			
+			
+//			alert(tempImgs);
+			var timer = setInterval(
+				function () {
+					oul.style.marginLeft = speed+'px';
+					if (Math.abs(speed) > parseInt(liWidth)*k) {
+						speed = -parseInt(liWidth)*k;
+						// 移除数组中第一个元素
+//						tempImgs.shift();
+//						// 往数组中添加最后一个元素
+//						tempImgs.push(imgs[k + 1]);
+//						setBgUrl();
+//						k++;
+					}
+					speed += speed;
+				}
+			,200);
+		}
+	</script>
+	<body>
+		<div class="warp">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		
+	</body>
+</html>

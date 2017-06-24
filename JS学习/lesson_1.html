@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性学习</title>
+		
+		<style type="text/css">
+			#div1 {
+				border: 1px solid royalblue;
+				width: 200px;
+				height: 300px;
+				text-align: right;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload = function () {
+				var tf = document.getElementById("text1");
+				var btn1 = document.getElementById("button1");
+				var div1 = document.getElementById("div1");
+				var select1 = document.getElementById("select1");
+//				var span1 = document.getElementById("span1");
+				
+				var tempStr = "";
+				btn1.onclick = function () {
+					if (tf.value != null) {
+//						tempStr += span1.innerHTML + tf.value + '<br/>';
+                      
+                        tempStr += select1.value + tf.value + '<br/>';
+						div1.innerHTML = tempStr;
+					} 
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="" id="div1"></div>
+		<select name="" id="select1">
+			<option value="男：" >男</option>
+			<option value="女：" >女</option>
+		</select>
+		<!--<span id="span1">
+			妙味：
+		</span>-->
+		<input type="text" id="text1"/>
+		<input type="button" value="提交" id="button1"/>
+	</body>
+</html>

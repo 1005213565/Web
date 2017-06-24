@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据类型转换</title>
+	</head>
+	
+	<script type="text/javascript">
+		// 字符串转num  Number(a)
+//		var a = '0100';
+//		alert(Number(a) + 100);
+		
+//		var a1 = '';
+//		alert(Number(a1));
+
+       // true = 1   false = 0
+//     var a2 = true;
+//	   alert(Number(a2));
+	   
+	   // parseInt(b)
+//	   var b = '100px';
+//	   alert(parseInt(b));
+	   
+	   // parseFloat()
+//	   var b1 = '123.333元';
+//	   alert(parseFloat(b1));
+	   
+	   
+	   /*
+	    隐式类型转换
+	    +         200 + '3' 变成字符串
+	    - * / %   '200' - 3 变成数字
+	    * */
+	   
+	   /*
+	    NaN: 不是一个数字的数字类型  false
+	    NaN和自己判断是不相等的
+	    typeof 判断类型
+	    
+	    一旦你写程序呈现了：NaN肯定进行了非法的运算操作
+	    * */
+	   
+	   
+	   /*
+	    isNaN: 不是一个数字  判断某些值是不是数字(不是说数字类型)
+	           里面先进行的是Number()的转换
+	    * */
+	   alert(isNaN([]));
+	</script>
+	<body>
+		
+	</body>
+</html>

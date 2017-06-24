@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ通讯录</title>
+		<style type="text/css">
+			#list {
+				list-style: none;
+			}
+			
+			#list ul {
+				list-style: none;
+				display: none;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#list ul li {
+				padding: 0px;
+				text-indent: 0px;
+				background: bisque;
+				text-indent: 20px;
+				line-height: 25px;
+				border-bottom: 1px solid black;
+			}
+			
+			h3 {
+				background: url(img/arrow_right.png) 5px center no-repeat lightcyan;
+				margin: 0px;
+				text-indent: 20px;
+			}
+			
+			.arrowDown {
+				background: url(img/arrow_down.png) 5px center no-repeat lightcyan;
+			}
+			
+			.arrowRight {
+				background: url(img/arrow_right.png) 5px center no-repeat lightcyan;
+			}
+			.div1 {
+				margin:  30px auto;
+				width: 500px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				var oUl = document.getElementById('list');
+				var aUl = oUl.getElementsByTagName('ul');
+				var aH3 = oUl.getElementsByTagName('h3');
+
+				for(var i = 0; i < aH3.length; i++) {
+					aH3[i].index = i; // 给h3添加索引
+					aH3[i].show = true;
+					aH3[i].onclick = function() {
+						if(this.show) {
+							// 取出对应的ul进行设置
+							aUl[this.index].style.display = "block";
+							this.className = 'arrowDown';
+							this.show = false;
+						} else {
+							// 取出对应的ul进行设置
+							aUl[this.index].style.display = "none";
+							this.className = 'arrowRight';
+							this.show = true;
+						}
+                        
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="div1">
+			<ul id="list">
+			<li>
+				<h3>我的好友</h3>
+				<ul>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+					<li>张三</li>
+				</ul>
+			</li>
+
+			<li>
+				<h3>企业好友</h3>
+				<ul>
+					<li>李四</li>
+					<li>李四</li>
+					<li>李四</li>
+					<li>李四</li>
+					<li>李四</li>
+				</ul>
+			</li>
+
+			<li>
+				<h3>黑名单</h3>
+				<ul>
+					<li>王麻子</li>
+					<li>王麻子</li>
+					<li>王麻子</li>
+					<li>王麻子</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		
+	</body>
+
+</html>
